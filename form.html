@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="form">
+      <form onsubmit="sendEmail(); reset(); return false;">
+      <table>
+        <th></th>
+
+
+
+    </div>
+    <script>
+      function sendEmail(){
+        Email.send({
+          Host : "smtp.gmail.com",
+          Username : "kyarnyothinn01@gmail.com",
+          Password : "kyarnyothinn149852",
+          To : 'kyarnyothinn001.com',
+          From : document.getElementsId("name").value,
+          Subject : "Enquiry from new contact",
+          Body : "Name" + document.getElementsId("name").value
+              + "<br> Email" + document.getElementsId("email").value
+              + "<br> Phone Number" + document.getElementById("phone").value
+              + "<br> Message" + document.getElementsId("message").value
+        }).then(
+        message => alert("Message has sent successfully!")
+        );
+
+      }
+
+
+    </script>
+
+  </body>
+</html>
